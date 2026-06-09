@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="th">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mission Control | SEO8U</title><link rel="stylesheet" href="styles.css"></head>
+<body class="app-body" data-dashboard>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="SEO8U"></a>
+    <nav class="side-nav">
+      <a href="#overview" data-page="overview"><span>◉</span>ภาพรวม</a>
+      <a href="#new-order" data-page="new-order"><span>＋</span>สั่งซื้อบริการ</a>
+      <a href="#orders" data-page="orders"><span>≡</span>รายการสั่งซื้อ</a>
+      <a href="#services" data-page="services"><span>⌘</span>บริการทั้งหมด</a>
+      <a href="#funds" data-page="funds"><span>฿</span>เติมเงิน</a>
+      <a href="#tickets" data-page="tickets"><span>?</span>Ticket ช่วยเหลือ</a>
+      <a href="https://t.me/seo8u" target="_blank" rel="noopener"><span>➤</span>Telegram Support</a>
+      <a href="https://www.facebook.com/seo8uofficial" target="_blank" rel="noopener"><span>f</span>Facebook Page</a>
+      <a href="tel:0929541510"><span>☎</span>เลขา CEO</a>
+      <a href="#api" data-page="api"><span>{ }</span>API & Reseller</a>
+      <a href="#account" data-page="account"><span>◎</span>บัญชีของฉัน</a>
+    </nav>
+  </aside>
+  <main class="app-main">
+    <header class="app-top">
+      <div class="actions"><button class="btn icon-btn mobile-toggle" data-menu>☰</button><div><strong>SEO8U Mission Control</strong><div style="color:var(--muted);font-size:.78rem">System operational</div></div></div>
+      <div class="account-chip"><div><strong data-user-name>SEO8U Member</strong><div style="color:var(--cyan);font-size:.76rem">● Online</div></div><span class="avatar" data-avatar>S</span></div>
+    </header>
+
+    <section class="page" id="overview">
+      <div class="page-title"><div><h2>ภาพรวมระบบ</h2><p>สถานะบัญชีและกิจกรรมล่าสุดของคุณ</p></div><a class="btn btn-primary" href="#new-order" data-page="new-order">＋ สร้างออเดอร์</a></div>
+      <div class="metrics-grid">
+        <article class="metric glass cyan"><span>ยอดเงินคงเหลือ</span><strong>฿ 0.00</strong></article>
+        <article class="metric glass gold"><span>ออเดอร์ทั้งหมด</span><strong>0</strong></article>
+        <article class="metric glass pink"><span>กำลังดำเนินการ</span><strong>0</strong></article>
+        <article class="metric glass"><span>ระดับสมาชิก</span><strong>Explorer</strong></article>
+      </div>
+      <div class="dashboard-grid">
+        <article class="panel glass"><h3>ทางลัด</h3><div class="quick-grid">
+          <a class="quick-action" href="#new-order" data-page="new-order"><strong>สั่งซื้อบริการ</strong><span>สร้างออเดอร์ใหม่</span></a>
+          <a class="quick-action" href="#funds" data-page="funds"><strong>เติมเงิน</strong><span>เพิ่มเครดิตเข้าบัญชี</span></a>
+          <a class="quick-action" href="#api" data-page="api"><strong>ตั้งค่า API</strong><span>เชื่อมต่อระบบ Reseller</span></a>
+          <a class="quick-action" href="#tickets" data-page="tickets"><strong>ขอความช่วยเหลือ</strong><span>เปิด Ticket ใหม่</span></a>
+        </div></article>
+        <article class="panel glass"><h3>สถานะเครือข่าย</h3><div class="summary-row"><span>API Gateway</span><strong style="color:var(--cyan)">Online</strong></div><div class="summary-row"><span>Order Engine</span><strong style="color:var(--cyan)">Operational</strong></div><div class="summary-row"><span>Support</span><strong>24/7</strong></div></article>
+      </div>
+    </section>
+
+    <section class="page" id="new-order">
+      <div class="page-title"><div><h2>สั่งซื้อบริการ</h2><p>เลือกบริการและคำนวณราคาแบบ Real-time</p></div></div>
+      <div class="order-layout">
+        <form class="panel glass" data-order-form>
+          <label class="field-label">หมวดหมู่</label><select class="field"><option>Instagram</option><option>Facebook</option><option>TikTok</option><option>YouTube</option><option>Google</option><option>Telegram</option></select>
+          <label class="field-label">บริการ</label><select class="field" data-service></select>
+          <label class="field-label">ลิงก์เป้าหมาย</label><input class="field" type="url" name="link" placeholder="https://..." required>
+          <label class="field-label">จำนวน</label><input class="field" data-quantity type="number" name="quantity" min="1" value="1000" required>
+          <label class="field-label">หมายเหตุ</label><textarea class="field" placeholder="รายละเอียดเพิ่มเติม (ถ้ามี)"></textarea>
+          <div class="alert show" data-order-state>โหมด Preview: ใส่ API Key ในหน้า API เพื่อเชื่อมต่อออเดอร์จริง</div>
+          <button class="btn btn-primary full">ส่งออเดอร์</button>
+        </form>
+        <aside class="panel glass summary-box"><h3>สรุปออเดอร์</h3><div class="summary-row"><span>ราคา / 1,000</span><strong data-rate>0 ฿</strong></div><div class="summary-row"><span>ขั้นต่ำ - สูงสุด</span><strong data-limits>-</strong></div><div class="summary-row"><span>ยอดชำระ</span><strong style="color:var(--cyan)" data-charge>0 ฿</strong></div><p style="color:var(--muted);line-height:1.65">ตรวจสอบลิงก์และจำนวนให้ถูกต้องก่อนส่ง ระบบจริงจะหักยอดเงินเมื่อ API ยืนยันออเดอร์สำเร็จ</p></aside>
+      </div>
+    </section>
+
+    <section class="page" id="orders">
+      <div class="page-title"><div><h2>รายการสั่งซื้อ</h2><p>ติดตามสถานะออเดอร์ทั้งหมด</p></div><div class="actions"><input class="field" style="width:230px" placeholder="ค้นหา Order ID"><button class="btn">ค้นหา</button></div></div>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>วันที่</th><th>บริการ</th><th>ลิงก์</th><th>จำนวน</th><th>ยอดเงิน</th><th>สถานะ</th></tr></thead><tbody><tr><td colspan="7" style="text-align:center;color:var(--muted);padding:40px">ยังไม่มีรายการสั่งซื้อ</td></tr></tbody></table></div>
+    </section>
+
+    <section class="page" id="services">
+      <div class="page-title"><div><h2>บริการทั้งหมด</h2><p>ค้นหาบริการตามแพลตฟอร์มและราคา</p></div><input class="field" style="width:280px" placeholder="ค้นหาบริการ"></div>
+      <div class="table-wrap"><table><thead><tr><th>Service ID</th><th>ชื่อบริการ</th><th>ราคา / 1K</th><th>Min</th><th>Max</th><th></th></tr></thead><tbody>
+        <tr><td>101</td><td>Instagram Followers | HQ Global</td><td>39 ฿</td><td>100</td><td>100,000</td><td><a class="btn" href="#new-order" data-page="new-order">สั่งซื้อ</a></td></tr>
+        <tr><td>202</td><td>Facebook Page Likes | Thailand</td><td>85 ฿</td><td>100</td><td>50,000</td><td><a class="btn" href="#new-order" data-page="new-order">สั่งซื้อ</a></td></tr>
+        <tr><td>303</td><td>TikTok Views | Fast Start</td><td>4.5 ฿</td><td>1,000</td><td>10,000,000</td><td><a class="btn" href="#new-order" data-page="new-order">สั่งซื้อ</a></td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="page" id="funds">
+      <div class="page-title"><div><h2>เติมเงินเข้าบัญชี</h2><p>สแกน QR หรือคัดลอกเลขบัญชี จากนั้นแนบสลิปเพื่อแจ้งยอด</p></div></div>
+      <div class="payment-layout">
+        <article class="qr-card glass">
+          <div class="payment-orbit" aria-hidden="true"></div>
+          <span class="eyebrow">Secure Payment Gateway</span><h3>สแกนเพื่อเติมเครดิต</h3>
+          <div class="qr-terminal">
+            <div class="terminal-head">
+              <span>SEO8U PAY</span>
+              <small><i aria-hidden="true"></i> SECURE CHANNEL</small>
+            </div>
+            <div class="qr-shell">
+              <span class="qr-corner corner-tl" aria-hidden="true"></span>
+              <span class="qr-corner corner-tr" aria-hidden="true"></span>
+              <span class="qr-corner corner-bl" aria-hidden="true"></span>
+              <span class="qr-corner corner-br" aria-hidden="true"></span>
+              <div class="qr-frame">
+                <img src="assets/payment-qr.png" alt="QR Code เติมเงิน SEO8U" data-payment-qr>
+                <div class="qr-placeholder" data-qr-placeholder hidden>รอเพิ่มไฟล์ QR ต้นฉบับ<br>payment-qr.png</div>
+              </div>
+            </div>
+            <div class="terminal-foot"><span>ธนาคารกรุงไทย</span><strong>กฤตเมธ มูลวรรณ</strong></div>
+            <div class="terminal-status"><span>ENCRYPTED PAYMENT</span><b>THAI QR PAYMENT</b></div>
+          </div>
+          <div class="actions" style="justify-content:center"><button class="btn btn-primary" data-save-qr>บันทึก QR Code</button></div>
+          <div class="copy-state" data-payment-state></div>
+        </article>
+        <article class="bank-card glass">
+          <div class="bank-head"><span class="bank-mark">KTB</span><div><span style="color:var(--muted)">ธนาคารกรุงไทย</span><h3 style="margin:3px 0 0">กฤตเมธ มูลวรรณ</h3></div></div>
+          <label class="field-label">เลขที่บัญชี</label>
+          <div class="account-number"><strong>868-0-27372-4</strong><button class="btn" data-copy-account>คัดลอก</button></div>
+          <p style="color:var(--muted);line-height:1.7">กรุณาตรวจสอบชื่อบัญชีให้ถูกต้องก่อนยืนยันการโอนเงิน ระบบจะเพิ่มเครดิตหลังตรวจสอบหลักฐานเรียบร้อย</p>
+          <form class="slip-form" data-slip-form>
+            <div class="form-row"><div><label class="field-label">จำนวนเงิน</label><input class="field" name="amount" type="number" min="1" placeholder="0.00" required></div><div><label class="field-label">วันและเวลาโอน</label><input class="field" name="transferTime" type="datetime-local" required></div></div>
+            <label class="field-label">แนบหลักฐานการโอน</label><input class="field" name="slip" type="file" accept="image/*" required>
+            <button class="btn btn-primary" style="margin-top:16px">แจ้งเติมเงิน</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" id="tickets">
+      <div class="page-title"><div><h2>Ticket ช่วยเหลือ</h2><p>ติดต่อทีม Support เกี่ยวกับออเดอร์หรือการชำระเงิน</p></div></div>
+      <div class="support-layout">
+        <form class="panel glass"><div class="form-row"><div><label class="field-label">หัวข้อ</label><select class="field"><option>ปัญหาออเดอร์</option><option>การเติมเงิน</option><option>API</option><option>อื่นๆ</option></select></div><div><label class="field-label">Order ID</label><input class="field" placeholder="ถ้ามี"></div></div><label class="field-label">รายละเอียด</label><textarea class="field" required></textarea><label class="field-label">ไฟล์แนบ</label><input class="field" type="file"><button class="btn btn-primary" style="margin-top:16px">เปิด Ticket</button></form>
+        <aside class="panel glass support-card"><span class="eyebrow">Direct Support</span><h3>ติดต่อทีม SEO8U</h3><p>สอบถามบริการ แจ้งปัญหาออเดอร์ หรือส่งหลักฐานการชำระเงินผ่านช่องทางอย่างเป็นทางการ</p><a class="btn btn-telegram full" href="https://t.me/seo8u" target="_blank" rel="noopener">➤ เปิดแชต Telegram</a><a class="btn btn-facebook full" href="https://www.facebook.com/seo8uofficial" target="_blank" rel="noopener">f เปิดเพจ Facebook</a><a class="btn btn-phone full" href="tel:0929541510">☎ โทร 092-954-1510</a><small>เลขา CEO · @seo8u</small></aside>
+      </div>
+    </section>
+
+    <section class="page" id="api">
+      <div class="page-title"><div><h2>API & Reseller</h2><p>เชื่อมระบบของคุณกับ Ads4U API v2 ผ่าน SEO8U proxy</p></div></div>
+      <div class="dashboard-grid">
+        <article class="panel glass"><h3>การตั้งค่า API</h3><label class="field-label">Ads4U API Key</label><input class="field" data-api-key type="password" placeholder="วาง API key จากหน้าโปรไฟล์ Ads4U"><div class="actions" style="margin-top:14px"><button class="btn btn-primary" data-save-api>บันทึก API Key</button><span style="color:var(--cyan);align-self:center" data-api-state></span></div><p style="color:var(--muted);line-height:1.65;margin-top:16px">สำหรับ production ควรตั้งค่าเป็น environment variable `ADS4U_API_KEY` บน server และไม่เก็บ key ใน browser</p></article>
+        <article class="panel glass"><h3>Endpoint</h3><div class="summary-row"><span>SEO8U Proxy</span><strong>/api</strong></div><div class="summary-row"><span>Provider</span><strong>ads4u.co/api/v2</strong></div><div class="summary-row"><span>Format</span><strong>JSON</strong></div></article>
+      </div>
+      <article class="panel glass" style="margin-top:16px"><h3>ตัวอย่างเรียกบริการ</h3><pre class="api-code">POST /api/services
+Content-Type: application/json
+
+{
+  "action": "services"
+}</pre></article>
+    </section>
+
+    <section class="page" id="account">
+      <div class="page-title"><div><h2>บัญชีของฉัน</h2><p>ข้อมูลส่วนตัว ภาษา และความปลอดภัย</p></div></div>
+      <div class="order-layout"><form class="panel glass"><div class="form-row"><div><label class="field-label">ชื่อที่แสดง</label><input class="field" data-user-name value="SEO8U Member"></div><div><label class="field-label">ภาษา</label><select class="field"><option>ไทย</option><option>English</option></select></div></div><label class="field-label">อีเมล</label><input class="field" type="email"><label class="field-label">รหัสผ่านใหม่</label><input class="field" type="password"><button class="btn btn-primary" style="margin-top:16px">บันทึกข้อมูล</button></form><aside class="panel glass"><h3>ความปลอดภัย</h3><div class="summary-row"><span>Two-factor authentication</span><strong>ปิด</strong></div><div class="summary-row"><span>Session ปัจจุบัน</span><strong style="color:var(--cyan)">Active</strong></div><button class="btn" data-logout style="margin-top:16px">ออกจากระบบ</button></aside></div>
+    </section>
+  </main>
+</div>
+<div class="contact-stack">
+  <a class="contact-float phone" href="tel:0929541510" aria-label="โทรหาเลขา CEO ที่หมายเลข 092-954-1510"><span>☎</span><strong>เลขา CEO</strong></a>
+  <a class="contact-float facebook" href="https://www.facebook.com/seo8uofficial" target="_blank" rel="noopener" aria-label="ติดต่อ SEO8U ผ่าน Facebook"><span>f</span><strong>Facebook</strong></a>
+  <a class="contact-float telegram" href="https://t.me/seo8u" target="_blank" rel="noopener" aria-label="ติดต่อ SEO8U ผ่าน Telegram"><span>➤</span><strong>Telegram</strong></a>
+</div>
+<script src="app.js"></script>
+</body></html>
