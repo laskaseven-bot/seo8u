@@ -1,0 +1,7 @@
+{
+  "name": "seo8u",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}
